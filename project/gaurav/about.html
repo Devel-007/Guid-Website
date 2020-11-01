@@ -1,0 +1,376 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Responsive Mega menu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link rel="stylesheet" href="bootsnav.css">   
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <script src="bootsnav.js"></script>
+  <style>
+   
+    
+    body{
+      background-color: black;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 750px;
+      
+    }
+    
+    nav.navbar.bootsnav{
+      border: none;
+      background: none;
+      margin-bottom: 150px;   
+      
+    }
+    
+    
+    nav.navbar.bootsnav ul.nav > li{margin-right: 20px;}
+    nav.navbar.bootsnav ul.nav > li > a{
+      padding: 10px 20px;
+      border-radius: 0;
+      color: #fdefcf;
+      text-transform: uppercase;
+      border: 2px solid rgba(255,255,255,0.2);
+      position: relative;
+      transition: all 0.3s ease 0s;
+      
+      
+    }
+    
+    
+    
+    
+    nav.navbar.bootsnav ul.nav > li.dropdown > a{
+      padding: 10px 30px 10px 15px;
+    }
+    
+    nav.navbar.bootsnav ul.nav > li > a:hover,
+    nav.navbar.bootsnav ul.nav > li.on > {
+    color: #fdefcf;
+    }
+    
+    
+    nav.navbar.bootsnav ul.nav > li > a > span:before{
+      content: "";
+      width: 0;
+      height: 3px;
+      background: #fdefcf;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.3s ease 0s;
+    }
+    
+    
+    nav.navbar.bootsnav ul.nav > li:hover > a > span:before{
+      width: 50%;
+      animation: bounce 1.5s 0.3s ease-out infinite;
+    }
+    
+    
+    
+    nav.navbar.bootsnav ul.nav > li.active > a > span:before,
+    nav.navbar.bootsnav ul.nav > li.on > a > span:before{
+        width: 50%;
+      left: 25%;
+    }
+    
+    
+    
+    nav.navbar.bootsnav ul.nav>li.dropdown > a.dropdown-toggle:after{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      margin:  0 0 0 7px;
+      
+    }
+    
+    
+    
+    
+    nav.navbar.bootsnav ul.nav>li.dropdown > ul{
+      top: 120%;
+      transition: all 0.8s ease 0s;
+    }
+    
+    
+    nav.navbar.bootsnav ul.nav > li.dropdown.on > ul{
+      
+      top: 110%;
+      
+    }
+    
+    .dropdown-menu.multi-dropdown{
+      position: absolute;
+      left: -100% !important;
+    }
+    
+    nav.navbar-bootsnav li.dropdown ul.dropdown-menu{
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      border: none;
+      border-radius: 20px;
+      
+    }
+    
+    nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content li{
+      font-size: 14px;
+      color: white;
+    }
+    
+    nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .title{
+      font-size: 16px;
+      font-weight: bold;
+      color: #1a4b6d;
+    }
+    
+    
+    @keyframes boucne{
+      0%{
+        left: 0;
+      }
+      48%{
+        left: 50%;
+      }
+      50%{
+        left: 50%;
+      }
+      
+      98%{
+        left:0%;
+      }
+      100%{
+        left:0%;
+      }
+    }   
+  </style>
+ <h1 style="color: white;"> JIGYSA</h1>
+ </head>
+ <body>
+  <br>
+  
+  <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-default navbar-mobile bootsnav on">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+                        <ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
+                            <li class="active"><a href="index.html" data-hover="Home">Home <span></span></a></li>
+                            <li><a href="about.html" data-hover="About">About <span></span></a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="Pages">After 12th <span></span></a>
+                                <ul class="dropdown-menu animated">
+                                    <li><a href="art.html">Arts</a></li>
+                                    <li><a href="science.html">Science</a></li>
+                                       <li><a href="commerce.html">Commerce</a></li>
+                                   
+                                </ul>
+                            </li>
+                            <li><a href="gallery.html" data-hover="Gallery">Gallery<span></span></a></li>
+                            <li class="dropdown megamenu-fw">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">After-Graduation <span></span></a>
+                                <ul class="dropdown-menu megamenu-content animated" role="menu">
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-menu col-md-3">
+                                                <h6 class="title">B-Tech</h6>
+                                                <div class="content">
+                                                    <ul class="menu-col">
+                                                        <li><a href="higher.html">Higher Studies</a></li> <li><a href="manage.html">Management</a></li>
+                                                        <li><a href="enter.html">Entrepreneurship</a></li>
+                                                        <li><a href="public.html">Public Service Undertakings</a></li>
+                                                          </ul>
+                                                </div>
+                                            </div><!-- end col-3 -->
+                                            <div class="col-menu col-md-3">
+                                                <h6 class="title">BCA</h6>
+                                                <div class="content">
+                                                    <ul class="menu-col">
+                                                        <li><a href="mba.html">MBA (Master of Business Administration)</a></li>
+                                                        <li><a href="data.html">Data Scientist</a></li>
+                                                        <li><a href="digi.html">Digital Marketer</a></li>
+                                                        </ul>
+                                                </div>
+                                            </div><!-- end col-3 -->
+                                            <div class="col-menu col-md-3">
+                                                <h6 class="title">B-Com</h6>
+                                                <div class="content">
+                                                    <ul class="menu-col">
+                                                        <li><a href="mba.html">MBA (Master of Business Administration)</a></li>
+                                                        <li><a href="ca.html"> Chartered Accountancy (CA)</a></li>
+                                                        <li><a href="cs.html">Company Secretary (CS)</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-menu col-md-3">
+                                                <h6 class="title">B.A.</h6>
+                                                <div class="content">
+                                                    <ul class="menu-col">
+                                                        <li><a href="mba.html">MBA (Master of Business Administration)</a></li>
+                                                        <li><a href="ma.html">M.A.(Masters of Arts)</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div><!-- end col-3 -->
+                                        </div><!-- end row -->
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="contact.html" data-hover="Contact">Contact <span></span></a></li>
+                             
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+  	<title>About-Us</title>
+<style type="text/css">
+	
+    body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+</style>
+</head>
+<body>
+
+	<div class="about-section">
+  <h1>About Us</h1>
+  <p>Career Counseling is a process that will help you to know and understand yourself and the world of work in order to make career, educational, and life decisions.</p>
+<p>
+Career development is more than just deciding on a major and what job you want to get when you graduate. It really is a lifelong process, meaning that throughout your life you will change, situations will change, and you will continually have to make career and life decisions. The goal of Career Counseling is to not only help you make the decisions you need to make now, but to give you the knowledge and skills you need to make future career and life decisions.
+</p>
+<p>
+<h3>What can I expect?</h3>
+<h4>Your Career Counselor WILL:</h4>
+Help you figure out who you are and what you want out of your education, your career, and your life.
+Be someone for you to talk to about your thoughts, ideas, feelings, and concerns about your career and educational choices, who will help you sort out, organize, and make sense of your thoughts and feelings.
+Help you identify the factors influencing your career development, and help you assess your interests, abilities, and values.
+Help you locate resources and sources of career information.
+Help you to determine next steps and develop a plan to achieve your goals.
+Your Career Counselor WON’T:
+Tell you what to do, or tell you what you should major in or what career you should pursue.
+Advise you in course selection or scheduling.
+Who needs Career Counseling?
+Since career development is a lifelong process, Career Counseling can be appropriate for anyone, including freshmen, sophomores, juniors, seniors, and even alumni. The earlier you get started making intentional decisions about your future, however, the better prepared you will be! We recommend that all freshmen come in and visit with a Career Counselor.
+</p>
+<p>
+<h3>Below are some examples of concerns that bring students to Career Counseling:
+</h3>
+<h4>Exploring Career and Major Options</h4>
+
+“I have no idea what I want to do with my life.”<br>
+“I don’t know what to major in.”<br>
+“I’ve narrowed it down to a couple career options, but I’m having a hard time choosing between them.”<br>
+“I know what I want to major in, but I have no idea what I want to do once I graduate.”<br>
+“I know what I want to do, but I’m not sure what the best major would be.<br>
+“I want to know what kinds of jobs I can get with my major.”<br>
+“I don’t feel like I know enough about all the different careers out there to know what I want to do.”<br>
+<h3>Resolving Conflicts</h3>
+
+“I like a lot of different subjects, and I keep changing my major because I’m not sure which one is the best for me!”<br>
+“I don’t like any of my classes and none of the majors seem really appealing to me.”<br>
+“I have a lot of work experience and I want to find a new career path that will build on the skills I already have.”<br>
+“I was planning on going into the _______ program, but I applied and didn’t get in. What do I do now?”<br>
+“I always thought I wanted to be a _______, but I got into my major and I really don’t like it!”<br>
+“I really like my major, but it’s not what I want to do for my career.”
+“I know what type of work I’d like to do, but I’m afraid I won’t be able to make enough money doing it.”<br>
+“My family really wants me to be a _______, but I’m not sure if that’s really what I want.”<br>
+“I’ve always planned on being a _______, but I’m wondering if it’s only because that’s all I know.”<br>
+“I want to find a field to go into where there will always be plenty of jobs.”
+“I want to find a career that will allow me to provide significant financial support for my family.”<br>
+“I’m working towards my career, but I think I might just really want to be a stay-at-home parent.”<br>
+“I’ve always planned to stay in Boise, but to do what I’d like to do I’d have to move.”<br>
+“I can’t find a job, so I’m thinking about going to grad school.”
+<br>
+</p>
+
+
+</div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<style type="text/css">
+.form-style-3{
+  max-width: 450px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.form-style-3 label{
+  display:block;
+  margin-bottom: 10px;
+}
+.form-style-3 label > span{
+  float: left;
+  width: 100px;
+  color: #F072A9;
+  font-weight: bold;
+  font-size: 13px;
+  text-shadow: 1px 1px 1px #fff;
+}
+.form-style-3 fieldset{
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  margin: 0px 0px 10px 0px;
+  border: 1px solid #FFD2D2;
+  padding: 20px;
+  background: #FFF4F4;
+  box-shadow: inset 0px 0px 15px #FFE5E5;
+  -moz-box-shadow: inset 0px 0px 15px #FFE5E5;
+  -webkit-box-shadow: inset 0px 0px 15px #FFE5E5;
+}
+.form-style-3 fieldset legend{
+  color: #FFA0C9;
+  border-top: 1px solid #FFD2D2;
+  border-left: 1px solid #FFD2D2;
+  border-right: 1px solid #FFD2D2;
+  border-radius: 5px 5px 0px 0px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  -moz-border-radius: 5px 5px 0px 0px;
+  background: #FFF4F4;
+  padding: 0px 8px 3px 8px;
+  box-shadow: -0px -1px 2px #F1F1F1;
+  -moz-box-shadow:-0px -1px 2px #F1F1F1;
+  -webkit-box-shadow:-0px -1px 2px #F1F1F1;
+  font-weight: normal;
+  font-size: 12px;
+}
+.form-style-3 textarea{
+  width:250px;
+  height:100px;
+}
+.form-style-3 input[type=text],
+.form-style-3 input[type=date],
+.form-style-3 input[type=datetime],
+.form-style-3 input[type=number],
+.form-style-3 input[type=search],
+.form-style-3 input[type=time],
+.form-style-3 input[type=url],
+.form-style-3 input[type=email],
+.form-style-3 select, 
+.form-style-3 textarea{
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border: 1px solid #FFC2DC;
+  outline: none;
+  color: #F072A9;
+  padding: 5px 8px 5px 8px;
+  box-shadow: inset 1px 1px 4px #FFD5E7;
+  -moz-box-shadow: inset 1px 1px 4px #FFD5E7;
+  -webkit-box-shadow: inset 1px 1px 4px #FFD5E7;
+  background: #FFEFF6;
+  width:50%;
+}
+.form-style-3  input[type=submit],
+.form-style-3  input[type=button]{
+  background: #EB3B88;
+  border: 1px solid #C94A81;
+  padding: 5px 15px 5px 15px;
+  color: #FFCBE2;
+  box-shadow: inset -1px -1px 3px #FF62A7;
+  -moz-box-shadow: inset -1px -1px 3px #FF62A7;
+  -webkit-box-shadow: inset -1px -1px 3px #FF62A7;
+  border-radius: 3px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;  
+  font-weight: bold;
+}
+.required{
+  color:red;
+  font-weight:normal;
+}
+</style>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Responsive Mega menu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link rel="stylesheet" href="bootsnav.css">   
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <script src="bootsnav.js"></script>
+  <style>
+   
+    
+    body{
+      background-color: black;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 750px;
+      
+    }
+    
+    nav.navbar.bootsnav{
+      border: none;
+      background: none;
+      margin-bottom: 150px;   
+      
+    }
+    
+    
+    nav.navbar.bootsnav ul.nav > li{margin-right: 20px;}
+    nav.navbar.bootsnav ul.nav > li > a{
+      padding: 10px 20px;
+      border-radius: 0;
+      color: #fdefcf;
+      text-transform: uppercase;
+      border: 2px solid rgba(255,255,255,0.2);
+      position: relative;
+      transition: all 0.3s ease 0s;
+      
+      
+    }
+    
+    
+    
+    
+    nav.navbar.bootsnav ul.nav > li.dropdown > a{
+      padding: 10px 30px 10px 15px;
+    }
+    
+    nav.navbar.bootsnav ul.nav > li > a:hover,
+    nav.navbar.bootsnav ul.nav > li.on > {
+    color: #fdefcf;
+    }
+    
+    
+    nav.navbar.bootsnav ul.nav > li > a > span:before{
+      content: "";
+      width: 0;
+      height: 3px;
+      background: #fdefcf;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.3s ease 0s;
+    }
+    
+    
+    nav.navbar.bootsnav ul.nav > li:hover > a > span:before{
+      width: 50%;
+      animation: bounce 1.5s 0.3s ease-out infinite;
+    }
+    
+    
+    
+    nav.navbar.bootsnav ul.nav > li.active > a > span:before,
+    nav.navbar.bootsnav ul.nav > li.on > a > span:before{
+        width: 50%;
+      left: 25%;
+    }
+    
+    
+    
+    nav.navbar.bootsnav ul.nav>li.dropdown > a.dropdown-toggle:after{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      margin:  0 0 0 7px;
+      
+    }
+    
+    
+    
+    
+    nav.navbar.bootsnav ul.nav>li.dropdown > ul{
+      top: 120%;
+      transition: all 0.8s ease 0s;
+    }
+    
+    
+    nav.navbar.bootsnav ul.nav > li.dropdown.on > ul{
+      
+      top: 110%;
+      
+    }
+    
+    .dropdown-menu.multi-dropdown{
+      position: absolute;
+      left: -100% !important;
+    }
+    
+    nav.navbar-bootsnav li.dropdown ul.dropdown-menu{
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      border: none;
+      border-radius: 20px;
+      
+    }
+    
+    nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content li{
+      font-size: 14px;
+      color: white;
+    }
+    
+    nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .title{
+      font-size: 16px;
+      font-weight: bold;
+      color: #1a4b6d;
+    }
+    
+    
+    @keyframes boucne{
+      0%{
+        left: 0;
+      }
+      48%{
+        left: 50%;
+      }
+      50%{
+        left: 50%;
+      }
+      
+      98%{
+        left:0%;
+      }
+      100%{
+        left:0%;
+      }
+    }   
+  </style>
+ <h1 style="color: white;"> JIGYSA</h1>
+ </head>
+ <body>
+  <br>
+  
+  <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-default navbar-mobile bootsnav on">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+                        <ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
+                            <li class="active"><a href="index.html" data-hover="Home">Home <span></span></a></li>
+                            <li><a href="about.html" data-hover="About">About <span></span></a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="Pages">After 12th <span></span></a>
+                                <ul class="dropdown-menu animated">
+                                    <li><a href="art.html">Arts</a></li>
+                                    <li><a href="science.html">Science</a></li>
+                                       <li><a href="commerce.html">Commerce</a></li>
+                                   
+                                </ul>
+                            </li>
+                            <li><a href="gallery.html" data-hover="Gallery">Gallery<span></span></a></li>
+                            <li class="dropdown megamenu-fw">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">After-Graduation <span></span></a>
+                                <ul class="dropdown-menu megamenu-content animated" role="menu">
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-menu col-md-3">
+                                                <h6 class="title">B-Tech</h6>
+                                                <div class="content">
+                                                    <ul class="menu-col">
+                                                        <li><a href="higher.html">Higher Studies</a></li> <li><a href="manage.html">Management</a></li>
+                                                        <li><a href="enter.html">Entrepreneurship</a></li>
+                                                        <li><a href="public.html">Public Service Undertakings</a></li>
+                                                          </ul>
+                                                </div>
+                                            </div><!-- end col-3 -->
+                                            <div class="col-menu col-md-3">
+                                                <h6 class="title">BCA</h6>
+                                                <div class="content">
+                                                    <ul class="menu-col">
+                                                        <li><a href="mba.html">MBA (Master of Business Administration)</a></li>
+                                                        <li><a href="data.html">Data Scientist</a></li>
+                                                        <li><a href="digi.html">Digital Marketer</a></li>
+                                                        </ul>
+                                                </div>
+                                            </div><!-- end col-3 -->
+                                            <div class="col-menu col-md-3">
+                                                <h6 class="title">B-Com</h6>
+                                                <div class="content">
+                                                    <ul class="menu-col">
+                                                        <li><a href="mba.html">MBA (Master of Business Administration)</a></li>
+                                                        <li><a href="ca.html"> Chartered Accountancy (CA)</a></li>
+                                                        <li><a href="cs.html">Company Secretary (CS)</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-menu col-md-3">
+                                                <h6 class="title">B.A.</h6>
+                                                <div class="content">
+                                                    <ul class="menu-col">
+                                                        <li><a href="mba.html">MBA (Master of Business Administration)</a></li>
+                                                        <li><a href="ma.html">M.A.(Masters of Arts)</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div><!-- end col-3 -->
+                                        </div><!-- end row -->
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="contact.html" data-hover="Contact">Contact <span></span></a></li>
+                             
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<center>
+  <div class="form-style-3">
+<form align="center">
+<fieldset><legend>Contact-Us</legend>
+<label for="field1"><span>Name <span class="required">*</span></span><input type="text" class="input-field" name="field1" value=""  pattern="[a-zA-Z]+" required="" /></label>
+<label for="field2"><span>Email <span class="required">*</span></span><input type="email" class="input-field" name="field2" value="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required="" /></label>
+
+<label for="field6"><span>Message <span class="required">*</span></span><textarea name="field6" class="textarea-field"></textarea></label>
+<label><span> </span><input type="submit" value="Submit" onclick="confirm('Message sent.')"  required="" /></label>
+</fieldset>
+</form>
+</div>
+</center>
+</body>
+</html>
+
+<head><link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<style type="text/css">
+  .footer
+  {
+    width: 100%;
+    background:#00121b;
+    display: block;
+    font-family: monospace;
+  }
+
+  .inner-footer
+  {
+    width: 95%;
+    margin: auto;
+    padding: 30px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+  .footer-items
+  {
+    width: 25%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+  }
+
+  h4
+  {
+    padding: 10px 0;
+    font-size: 25px;
+    color: white;
+    text-transform: uppercase;
+
+  }
+  .footer-item p
+  {
+    color: grey;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 25px;
+  }
+  h5
+  {
+    margin: 10px 0;
+    color: grey;
+    font-size: 16px;
+    font-weight: lighter;
+    text-transform: uppercase;
+  }
+  .border
+  {
+    height: 2px;
+    width: 40px;
+    background:#ff9800;
+
+  }
+  ol
+  {
+    list-style: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+  ol a
+  {
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    transition: 0.3s;
+  }
+  ol a:hover{
+    color: #ff9800;
+  }
+    
+    .social-media
+    {
+      width: 100%;
+      color: white;
+      text-align: center;
+    }
+    .social-media a
+    {
+      text-decoration: none;
+    }
+    .social-media i
+    {
+      height: 15px;
+      width: 15px;
+      margin: 20px 5px;
+      padding: 10px;
+      color: #fff;
+      border-radius: 50%;
+      border:1px solid grey;
+      transition: 0.3s;
+    }
+    .social-media i:hover
+    {
+      background: #ff9800;
+    }
+    .footer-bottom
+    {
+      padding: 10px;
+      background: #3d545f;
+      color: white;
+      font-size: 12px;
+    }
+
+</style>
+</head>
+<body>
+<div class="footer">
+  <div class="inner-footer">
+    
+
+    <div class="footer-items">
+ <h5 class="text-uppercase">JIGYASA</h5>
+        <p>We are here to guide you about your carrer.</p>
+
+    </div>  
+
+    <div class="footer-items">
+      <h5>Quick Links</h5>
+      <div class="border"></div>
+      <ol>
+        <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="gallery.html">Gallery</a>
+          </li>
+          <li>
+            <a href="about.html">About-Us</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact-Us</a>
+          </li>
+         
+      </ol>
+
+    </div>
+
+    <div class="footer-items">
+      <h5>Categories</h5>
+      <div class="border"></div>
+      <ol>
+       <li>
+            <a href="science.html">Science</a>
+          </li>
+          <li>
+            <a href="commerce.html">Commerce</a>
+          </li>
+          <li>
+            <a href="art.html">Arts</a>
+          </li>
+          
+
+            </ol>
+    </div>  
+
+      <div class="footer-item">  
+          <h5>Contact-us</h5>
+          <div class="border"></div>
+          <ol>
+         <li> <i class="fa fa-map-marker" aria-hidden="true"></i>1, XYZ Street, Rajasthan</li>
+          <li><i class="fa fa-phone" aria-hidden="true"></i>12345678902</li>
+          <li><i class="fa fa-envelope" aria-hidden="true"></i>gaurav@bikaner.com</li>           
+        </ol>
+
+      <div class="social-media">
+             <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+             <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+             <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+             <a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    
+    <div class="footer-bottom">
+      Copyright &copy; JIGYASA 2019. All rights reserved.
+    </div>
+
+    </div>
+
+  </div>
+
+</body>
